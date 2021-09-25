@@ -5,6 +5,7 @@ node{
    stage('Compile-Package'){
       // Get maven home path
       def mavenhome = tool name: 'jenkins-maven',type: 'maven'
+      export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
       sh "${mavenhome}/bin/mvn package"   
    }
    
