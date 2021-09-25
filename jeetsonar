@@ -10,7 +10,7 @@ node{
    
    stage('SonarQube Analysis') {
         def mavenhome =  tool name: 'jenkins-maven', type: 'maven'
-        def javahone = tool name: 'jdk11', type: 'jdk'
+        // def javahone = tool name: 'jdk11', type: 'jdk'
         withSonarQubeEnv('sonar-9') {
         export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
         sh "${mavenhome}/bin/mvn sonar:sonar"
