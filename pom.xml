@@ -7,6 +7,9 @@
 	<version>0.0.2</version>
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
+	<properties>
+  		<sonar.projectKey>my-app</sonar.projectKey>
+	</properties>
 
 	<dependencies>
 		<dependency>
