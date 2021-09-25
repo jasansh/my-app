@@ -9,6 +9,9 @@ node{
    }
    
    stage('SonarQube Analysis') {
+        tools {
+        jdk "jdk11" // the name you have given the JDK installation in Global Tool Configuration
+        }
         def mavenhome =  tool name: 'jenkins-maven', type: 'maven'
         withSonarQubeEnv('sonar-9') { 
         sh "${mavenhome}/bin/mvn sonar:sonar"
